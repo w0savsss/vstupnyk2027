@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вступник 2026 | Твій гід у вступну кампанію</title>
+    <meta name="description" content="Офіційний гід для вступників 2026. Все про вступ після 9 та 11 класу, НМТ, спеціальності, особистий кабінет.">
+    <link rel="canonical" href="https://w0savsss.github.io/vstupnyk2026/">
+    <style>
+        :root {
+            --blue: #0057B7;
+            --yellow: #FFD700;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --accent: #0077cc;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+        header {
+            background: linear-gradient(135deg, var(--blue), #003d82);
+            color: white;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .logo span { color: var(--yellow); }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { color: white; text-decoration: none; font-weight: 500; }
+        nav a:hover { color: var(--yellow); }
+        .hero {
+            background: linear-gradient(rgba(0,87,183,0.85), rgba(0,61,130,0.9)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            padding: 6rem 5% 4rem;
+            text-align: center;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.3rem; max-width: 800px; margin: 0 auto 2rem; }
+        .btn {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--dark);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-3px); }
+        .btn-outline { background: transparent; border: 2px solid white; color: white; }
+        section { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        h2 { text-align: center; font-size: 2.2rem; margin-bottom: 2rem; color: var(--blue); }
+        .dates-grid, .steps, .unis, .faq {
+            display: grid;
+            gap: 1.5rem;
+        }
+        .dates-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--blue);
+        }
+        .card h3 { color: var(--blue); margin-bottom: 0.5rem; }
+        .steps { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .step-num {
+            background: var(--yellow);
+            color: var(--dark);
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: bold; margin-bottom: 1rem;
+        }
+        .calculator {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 2rem auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .calc-inputs { display: grid; gap: 1rem; margin: 1rem 0; }
+        input, select {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        .result { font-size: 1.5rem; font-weight: bold; color: var(--blue); text-align: center; margin-top: 1rem; }
+        .links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+        .link-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s;
+        }
+        .link-card:hover { transform: translateY(-5px); border-color: var(--blue); }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Вступник<span>2026</span></div>
+            <ul>
+                <li><a href="#dates">Дати</a></li>
+                <li><a href="#grade9">З 9 класу</a></li>
+                <li><a href="#grade11">З 11 класу</a></li>
+                <li><a href="#cabinet">Мій кабінет</a></li>
+                <li><a href="#steps">Кроки</a></li>
+                <li><a href="#calc">Калькулятор</a></li>
+                <li><a href="#links">Ресурси</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Твій гід у вступну кампанію 2026</h1>
+        <p>Все необхідне для успішного вступу до університетів України: ключові дати, покрокові інструкції, калькулятор балів та посилання на офіційні ресурси.</p>
+        <a href="#steps" class="btn">Почати підготовку</a>
+        <a href="https://vstup.edbo.gov.ua/" target="_blank" class="btn btn-outline">Офіційний портал ЄДЕБО</a>
+    </section>
+
+    <section id="dates">
+        <h2>Ключові дати вступної кампанії 2026</h2>
+        <div class="dates-grid">
+            <div class="card">
+                <h3>Реєстрація на НМТ</h3>
+                <p>Основна: 5 березня – 2 квітня<br>Додаткова: 11–16 травня</p>
+            </div>
+            <div class="card">
+                <h3>Проведення НМТ</h3>
+                <p>Основна сесія: 20 травня – 25 червня<br>Додаткова: 17–24 липня</p>
+            </div>
+            <div class="card">
+                <h3>Електронні кабінети</h3>
+                <p>Реєстрація з 1 липня<br>Працюють до 15 жовтня</p>
+            </div>
+            <div class="card">
+                <h3>Подання заяв</h3>
+                <p>З 19 липня до 1 серпня (18:00)<br>До 10 заяв (5 на бюджет)</p>
+            </div>
+            <div class="card">
+                <h3>Результати НМТ</h3>
+                <p>Основна сесія: до 3 липня<br>Додаткова: до 29 липня</p>
+            </div>
+            <div class="card">
+                <h3>Зарахування</h3>
+                <p>Списки рекомендованих: до 6 серпня<br>Зарахування: до 13 серпня</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="grade9">
+        <h2>Вступ після 9 класу (фахова передвища освіта)</h2>
+        <p style="text-align:center; max-width:800px; margin:0 auto 2rem; font-size:1.1rem;">
+            Після 9 класу можна вступити до <strong>фахових коледжів</strong> (фахова передвища освіта) або закладів професійної освіти. 
+            Отримаєш диплом <strong>фахового молодшого бакалавра</strong> і одночасно повну середню освіту. НМТ складати не потрібно!
+        </p>
+
+        <div class="dates-grid">
+            <div class="card">
+                <h3>Реєстрація кабінетів</h3>
+                <p>З <strong>25 червня</strong> до 15 жовтня<br>на vstup.edbo.gov.ua</p>
+            </div>
+            <div class="card">
+                <h3>Подання заяв</h3>
+                <p><strong>1–20 липня</strong> (до 18:00)<br>на бюджет і контракт</p>
+            </div>
+            <div class="card">
+                <h3>Співбесіди / конкурси</h3>
+                <p><strong>21–28 липня</strong><br>1–2 предмети або творчий конкурс</p>
+            </div>
+            <div class="card">
+                <h3>Рейтингові списки</h3>
+                <p>Кінець липня<br>(орієнтовно 29–31 липня)</p>
+            </div>
+            <div class="card">
+                <h3>Зарахування на бюджет</h3>
+                <p>До початку серпня<br>(орієнтовно до 7 серпня)</p>
+            </div>
+            <div class="card">
+                <h3>Кількість заяв</h3>
+                <p>До <strong>10 заяв</strong> загалом<br>з них до 5 на бюджет</p>
+            </div>
+        </div>
+
+        <h3 style="text-align:center; margin:2.5rem 0 1rem; color:var(--blue);">Що потрібно для вступу після 9 класу</h3>
+        <div class="steps">
+            <div class="card">
+                <div class="step-num">1</div>
+                <h3>Свідоцтво про базову середню освіту</h3>
+                <p>Атестат за 9 клас (БСО). Також потрібні документи, що посвідчують особу, фото, медична довідка (за потреби закладу).</p>
+            </div>
+            <div class="card">
+                <div class="step-num">2</div>
+                <h3>Електронний кабінет</h3>
+                <p>Створи кабінет на vstup.edbo.gov.ua з 25 червня. Завантаж скани документів.</p>
+            </div>
+            <div class="card">
+                <div class="step-num">3</div>
+                <h3>Обери коледж і спеціальність</h3>
+                <p>Шукай на vstup.osvita.ua або сайтах коледжів. Популярні напрями: медицина, будівництво, IT, інженерія, освіта, транспорт.</p>
+            </div>
+            <div class="card">
+                <div class="step-num">4</div>
+                <h3>Пройди співбесіду</h3>
+                <p>Більшість спеціальностей — співбесіда з 1–2 предметів за шкільною програмою. Для творчих/спортивних — творчий конкурс.</p>
+            </div>
+            <div class="card">
+                <div class="step-num">5</div>
+                <h3>Мотиваційний лист</h3>
+                <p>Не обов’язковий за правилами МОН, але деякі коледжі можуть його вимагати у своїх правилах прийому. Перевіряй!</p>
+            </div>
+            <div class="card">
+                <div class="step-num">6</div>
+                <h3>Підтверди місце</h3>
+                <p>Після рекомендації підтверди вибір у кабінеті та виконай вимоги для зарахування (оригінали документів).</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top:2rem; border-left-color: var(--yellow);">
+            <h3>Важливо знати</h3>
+            <ul style="margin-left:1.2rem; margin-top:0.5rem;">
+                <li>Під час навчання в коледжі після 9 класу ти одночасно здобуваєш повну загальну середню освіту.</li>
+                <li>Після коледжу можна продовжити навчання в університеті (часто на скороченій програмі).</li>
+                <li>Є додатковий набір на контракт пізніше (до жовтня).</li>
+                <li>Завжди перевіряй точні дати та правила на сайті конкретного коледжу та на mon.gov.ua.</li>
+            </ul>
+        </div>
+
+        <h3 style="text-align:center; margin:2.5rem 0 1rem; color:var(--blue);">Популярні спеціальності в коледжах (2026)</h3>
+        <p style="text-align:center; margin-bottom:1.5rem;">За даними МОН України. Короткі описи допоможуть зрозуміти, чим займаються фахівці.</p>
+
+        <div class="dates-grid">
+            <div class="card">
+                <h3>Медсестринство</h3>
+                <p>Догляд за пацієнтами, допомога лікарям, робота в лікарнях, поліклініках, швидкій допомозі. Одна з найзатребуваніших спеціальностей на бюджеті.</p>
+            </div>
+            <div class="card">
+                <h3>Будівництво та цивільна інженерія</h3>
+                <p>Проєктування, будівництво будівель, доріг, інженерних споруд. Робота на будівельних майданчиках, в проєктних організаціях.</p>
+            </div>
+            <div class="card">
+                <h3>Електрична інженерія</h3>
+                <p>Монтаж, обслуговування електричних мереж, обладнання, енергосистем. Попит у промисловості та житлово-комунальному господарстві.</p>
+            </div>
+            <div class="card">
+                <h3>Автомобільний транспорт</h3>
+                <p>Обслуговування, ремонт автомобілів, робота в автосервісах, транспортних компаніях, логістиці.</p>
+            </div>
+            <div class="card">
+                <h3>Харчові технології</h3>
+                <p>Виробництво продуктів харчування, контроль якості, робота на харчових підприємствах, у ресторанах і кафе.</p>
+            </div>
+            <div class="card">
+                <h3>Машинобудування</h3>
+                <p>Виготовлення та обслуговування машин, механізмів, обладнання. Робота на заводах і в ремонтних службах.</p>
+            </div>
+            <div class="card">
+                <h3>Комп’ютерна інженерія</h3>
+                <p>Збирання, налаштування та обслуговування комп’ютерів, мереж, серверів. Технічна підтримка IT-систем.</p>
+            </div>
+            <div class="card">
+                <h3>Інженерія програмного забезпечення</h3>
+                <p>Розробка програм, сайтів, додатків. Початок кар’єри в IT без повної вищої освіти.</p>
+            </div>
+            <div class="card">
+                <h3>Менеджмент</h3>
+                <p>Організація роботи колективу, управління процесами в бізнесі, торгівлі, сфері послуг. Широкі можливості працевлаштування.</p>
+            </div>
+            <div class="card">
+                <h3>Облік і оподаткування</h3>
+                <p>Ведення бухгалтерського обліку, розрахунки з податками, робота в бухгалтеріях підприємств і компаній.</p>
+            </div>
+            <div class="card">
+                <h3>Фінанси, банківська справа</h3>
+                <p>Робота в банках, страхових компаніях, фінансових відділах. Аналіз грошей, кредитів, інвестицій.</p>
+            </div>
+            <div class="card">
+                <h3>Агроінженерія</h3>
+                <p>Обслуговування сільськогосподарської техніки, робота в агросекторі, на фермах і в машинобудівних господарствах.</p>
+            </div>
+        </div>
+
+        <p style="text-align:center; margin-top:1.5rem; font-size:0.9rem; color:#666;">
+            Ці спеціальності були найпопулярнішими у 2026 році. Точні програми та вимоги дивись на сайтах конкретних коледжів.
+        </p>
+    </section>
+
+    <section id="grade11">
+        <h2>Вступ після 11 класу (університети)</h2>
+        <p style="text-align:center; max-width:800px; margin:0 auto 2rem; font-size:1.1rem;">
+            Після 11 класу вступаєш до закладів вищої освіти на бакалаврат за результатами НМТ. 
+            Нижче — популярні спеціальності з короткими описами.
+        </p>
+
+        <h3 style="text-align:center; margin:1rem 0; color:var(--blue);">Популярні спеціальності бакалаврату</h3>
+        <div class="dates-grid">
+            <div class="card">
+                <h3>Комп’ютерні науки / Інженерія ПЗ</h3>
+                <p>Програмування, розробка сайтів, додатків, штучний інтелект, аналіз даних. Одна з найзатребуваніших сфер з високими зарплатами.</p>
+            </div>
+            <div class="card">
+                <h3>Кібербезпека</h3>
+                <p>Захист інформаційних систем, мереж і даних від хакерів. Дуже актуальна спеціальність у сучасному світі.</p>
+            </div>
+            <div class="card">
+                <h3>Менеджмент</h3>
+                <p>Управління людьми, процесами та компаніями. Підходить тим, хто хоче стати керівником або відкрити свій бізнес.</p>
+            </div>
+            <div class="card">
+                <h3>Психологія</h3>
+                <p>Вивчення поведінки людини, допомога людям у складних ситуаціях. Робота в школах, клініках, HR, приватна практика.</p>
+            </div>
+            <div class="card">
+                <h3>Філологія</h3>
+                <p>Мови, література, переклад. Можна працювати перекладачем, викладачем, редактором або в міжнародних компаніях.</p>
+            </div>
+            <div class="card">
+                <h3>Маркетинг</h3>
+                <p>Просування товарів і послуг, реклама, SMM, бренд-менеджмент. Творча й сучасна спеціальність.</p>
+            </div>
+            <div class="card">
+                <h3>Економіка та міжнародні відносини</h3>
+                <p>Аналіз економіки, фінанси, торгівля між країнами. Підходить для роботи в банках, компаніях, міжнародних організаціях.</p>
+            </div>
+            <div class="card">
+                <h3>Право</h3>
+                <p>Юриспруденція: закони, суди, захист прав. Робота адвокатом, юристом у компаніях або державі.</p>
+            </div>
+            <div class="card">
+                <h3>Середня освіта (педагогіка)</h3>
+                <p>Підготовка вчителів. Багато бюджетних місць. Можна викладати предмети в школах.</p>
+            </div>
+            <div class="card">
+                <h3>Медицина</h3>
+                <p>Лікарська справа. Довге навчання, але дуже відповідальна і важлива професія. Високий конкурс.</p>
+            </div>
+            <div class="card">
+                <h3>Фінанси, банківська справа</h3>
+                <p>Гроші, кредити, інвестиції, робота в банках і фінансових компаніях.</p>
+            </div>
+            <div class="card">
+                <h3>Інженерні спеціальності</h3>
+                <p>Будівництво, машинобудування, енергетика, автоматизація. Практичні професії з хорошим попитом.</p>
+            </div>
+        </div>
+
+        <p style="text-align:center; margin-top:1.5rem; font-size:0.9rem; color:#666;">
+            Точні коефіцієнти, прохідні бали та вимоги дивись на сайтах університетів та на vstup.osvita.ua.
+        </p>
+    </section>
+
+    <section id="cabinet">
+        <h2>Особистий кабінет вступника</h2>
+        <p style="text-align:center; max-width:800px; margin:0 auto 2rem;">
+            Тут ти можеш зберегти свою інформацію, бали та відстежувати підготовку. 
+            (Це демо-версія — дані зберігаються тільки в браузері)
+        </p>
+
+        <div class="calculator" style="max-width:800px;">
+            <h3 style="color:var(--blue); margin-bottom:1rem;">Мої дані</h3>
+            <div class="calc-inputs">
+                <input type="text" id="name" placeholder="ПІБ (прізвище, ім’я, по батькові)">
+                <input type="text" id="school" placeholder="Школа / клас">
+                <input type="email" id="email" placeholder="Електронна пошта">
+                <input type="tel" id="phone" placeholder="Телефон">
+            </div>
+
+            <h3 style="color:var(--blue); margin:1.5rem 0 1rem;">Результати НМТ (100–200)</h3>
+            <div class="calc-inputs">
+                <input type="number" id="cab_ukr" placeholder="Українська мова" min="100" max="200">
+                <input type="number" id="cab_math" placeholder="Математика" min="100" max="200">
+                <input type="number" id="cab_hist" placeholder="Історія України" min="100" max="200">
+                <input type="number" id="cab_choice" placeholder="Предмет на вибір" min="100" max="200">
+            </div>
+
+            <h3 style="color:var(--blue); margin:1.5rem 0 1rem;">Мої цілі</h3>
+            <div class="calc-inputs">
+                <input type="text" id="goal_uni" placeholder="Бажаний університет">
+                <input type="text" id="goal_spec" placeholder="Бажана спеціальність">
+                <select id="priority">
+                    <option value="">Пріоритет форми навчання</option>
+                    <option value="budget">Бюджет</option>
+                    <option value="contract">Контракт</option>
+                    <option value="both">І бюджет, і контракт</option>
+                </select>
+            </div>
+
+            <h3 style="color:var(--blue); margin:1.5rem 0 1rem;">Статус заяв</h3>
+            <div class="calc-inputs">
+                <select id="app_status">
+                    <option value="">Обери статус</option>
+                    <option value="preparing">Готуюся / ще не подавав</option>
+                    <option value="submitted">Заяви подано</option>
+                    <option value="recommended">Є рекомендація</option>
+                    <option value="enrolled">Зараховано</option>
+                    <option value="waiting">Чекаю результати</option>
+                </select>
+                <input type="text" id="app_places" placeholder="Куди подав заяви (університети)">
+            </div>
+
+            <h3 style="color:var(--blue); margin:1.5rem 0 1rem;">Нотатки</h3>
+            <textarea id="notes" placeholder="Тут можна записати важливі дати, паролі від кабінетів, ідеї, нагадування..." 
+                      style="width:100%; min-height:120px; padding:1rem; border:2px solid #e0e0e0; border-radius:12px; font-size:1rem; resize:vertical;"></textarea>
+
+            <button class="btn" onclick="saveCabinet()">Зберегти дані</button>
+            <button class="btn btn-outline" style="border-color:var(--blue); color:var(--blue);" onclick="loadCabinet()">Завантажити збережене</button>
+        </div>
+
+        <div id="savedInfo" style="display:none; margin-top:2rem;">
+            <div class="card" style="max-width:800px; margin:0 auto;">
+                <h3>Збережена інформація</h3>
+                <div id="infoContent" style="margin-top:1rem;"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="steps">
+        <h2>Покроковий план вступу</h2>
+        <div class="steps">
+            <div class="card">
+                <div class="step-num">1</div>
+                <h3>Підготовка до НМТ</h3>
+                <p>Зареєструйся на testportal.gov.ua. Складай пробні тести на Abitly або інших платформах. Обов'язкові предмети: українська мова, математика, історія України + предмет на вибір.</p>
+            </div>
+            <div class="card">
+                <div class="step-num">2</div>
+                <h3>Склади НМТ</h3>
+                <p>Пройди тестування в основну або додаткову сесію. Результати з'являться в особистому кабінеті.</p>
+            </div>
+            <div class="card">
+                <div class="step-num">3</div>
+                <h3>Створи електронний кабінет</h3>
+                <p>З 1 липня на vstup.edbo.gov.ua. Завантаж документи та сертифікати НМТ.</p>
+            </div>
+            <div class="card">
+                <div class="step-num">4</div>
+                <h3>Обери спеціальності</h3>
+                <p>Досліджуй університети на vstup.osvita.ua або Abitly. Порівнюй прохідні бали та місця.</p>
+            </div>
+            <div class="card">
+                <div class="step-num">5</div>
+                <h3>Подай заяви</h3>
+                <p>З 19 липня подай до 10 заяв через електронний кабінет. Вкажи пріоритети.</p>
+            </div>
+            <div class="card">
+                <div class="step-num">6</div>
+                <h3>Слідкуй за рейтингом</h3>
+                <p>Перевіряй рейтингові списки на vstup.osvita.ua та підтверджуй місце навчання.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="calc">
+        <h2>Калькулятор конкурсного балу (спрощений)</h2>
+        <div class="calculator">
+            <p style="text-align:center; margin-bottom:1rem;">Введи бали НМТ (100-200) для орієнтовного розрахунку. Коефіцієнти залежать від спеціальності!</p>
+            <div class="calc-inputs">
+                <input type="number" id="ukr" placeholder="Українська мова (100-200)" min="100" max="200">
+                <input type="number" id="math" placeholder="Математика (100-200)" min="100" max="200">
+                <input type="number" id="hist" placeholder="Історія України (100-200)" min="100" max="200">
+                <input type="number" id="choice" placeholder="Предмет на вибір (100-200)" min="100" max="200">
+                <select id="spec">
+                    <option value="1.0">Технічні / IT (вищі коеф. на мат)</option>
+                    <option value="0.9">Гуманітарні</option>
+                    <option value="1.0">Медичні / Природничі</option>
+                </select>
+            </div>
+            <button class="btn" onclick="calculate()">Розрахувати</button>
+            <div class="result" id="result">Твій орієнтовний бал: —</div>
+            <p style="font-size:0.85rem; color:#666; margin-top:1rem; text-align:center;">Увага: це спрощений розрахунок. Реальні коефіцієнти дивіться на сайті обраного університету.</p>
+        </div>
+    </section>
+
+    <section id="links">
+        <h2>Офіційні та корисні ресурси</h2>
+        <div class="links">
+            <a href="https://vstup.edbo.gov.ua/" target="_blank" class="link-card">
+                <h3>ЄДЕБО</h3>
+                <p>Офіційний портал для подання заяв та електронний кабінет</p>
+            </a>
+            <a href="https://vstup.osvita.ua/" target="_blank" class="link-card">
+                <h3>Вступ.Освіта.UA</h3>
+                <p>Рейтингові списки, пошук спеціальностей та університетів</p>
+            </a>
+            <a href="https://abitly.org/uk" target="_blank" class="link-card">
+                <h3>Abitly</h3>
+                <p>Пробні тести НМТ, порівняння ЗВО, калькулятор шансів</p>
+            </a>
+            <a href="https://testportal.gov.ua/" target="_blank" class="link-card">
+                <h3>УЦОЯО</h3>
+                <p>Реєстрація на НМТ та результати тестування</p>
+            </a>
+            <a href="https://www.education.ua/" target="_blank" class="link-card">
+                <h3>Education.ua</h3>
+                <p>Каталог закладів освіти та новини</p>
+            </a>
+            <a href="https://mon.gov.ua/" target="_blank" class="link-card">
+                <h3>МОН України</h3>
+                <p>Офіційні правила вступу та нормативні документи</p>
+            </a>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Часті питання</h2>
+        <div class="faq">
+            <div class="card">
+                <h3>Скільки заяв можна подати?</h3>
+                <p>До 10 заяв загалом, з яких не більше 5 на бюджетну форму навчання.</p>
+            </div>
+            <div class="card">
+                <h3>Чи можна використовувати старі результати НМТ?</h3>
+                <p>Так, результати НМТ 2023, 2024 та 2025 років дійсні для вступу 2026.</p>
+            </div>
+            <div class="card">
+                <h3>Що робити, якщо не склав НМТ?</h3>
+                <p>Є додаткова сесія. Також для деяких спеціальностей можливі співбесіди або інші форми вступу (уточнюй правила).</p>
+            </div>
+            <div class="card">
+                <h3>Де дивитися рейтингові списки?</h3>
+                <p>На vstup.osvita.ua (оновлюються щодня) та в особистому кабінеті ЄДЕБО.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Вступник 2026 — неофіційний гід для абітурієнтів України.</p>
+        <p>Сайт: <a href="https://w0savsss.github.io/vstupnyk2026/" style="color: #FFD700; text-decoration: underline;">https://w0savsss.github.io/vstupnyk2026/</a></p>
+        <p>Завжди перевіряйте актуальну інформацію на офіційних сайтах: vstup.edbo.gov.ua та mon.gov.ua</p>
+        <p style="margin-top:1rem;">© 2026 | Створено для допомоги вступникам</p>
+    </footer>
+
+    <script>
+        function calculate() {
+            const ukr = parseFloat(document.getElementById('ukr').value) || 0;
+            const math = parseFloat(document.getElementById('math').value) || 0;
+            const hist = parseFloat(document.getElementById('hist').value) || 0;
+            const choice = parseFloat(document.getElementById('choice').value) || 0;
+            const factor = parseFloat(document.getElementById('spec').value);
+
+            if (ukr < 100 || math < 100 || hist < 100 || choice < 100) {
+                document.getElementById('result').innerText = 'Введи всі бали від 100 до 200';
+                return;
+            }
+
+            let score = (ukr * 0.3 + math * 0.4 * factor + hist * 0.2 + choice * 0.1) * 1.1;
+            score = Math.round(score * 100) / 100;
+            score = Math.min(score, 200);
+
+            document.getElementById('result').innerText = `Твій орієнтовний бал: ${score}`;
+        }
+
+        function saveCabinet() {
+            const data = {
+                name: document.getElementById('name').value,
+                school: document.getElementById('school').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                ukr: document.getElementById('cab_ukr').value,
+                math: document.getElementById('cab_math').value,
+                hist: document.getElementById('cab_hist').value,
+                choice: document.getElementById('cab_choice').value,
+                goal_uni: document.getElementById('goal_uni').value,
+                goal_spec: document.getElementById('goal_spec').value,
+                priority: document.getElementById('priority').value,
+                app_status: document.getElementById('app_status').value,
+                app_places: document.getElementById('app_places').value,
+                notes: document.getElementById('notes').value
+            };
+
+            try {
+                localStorage.setItem('applicantData', JSON.stringify(data));
+                alert('Дані збережено!');
+            } catch (e) {
+                alert('Збереження недоступне в цьому середовищі (localStorage заблокований). Дані показані нижче.');
+            }
+            loadCabinet(data);
+        }
+
+        function loadCabinet(passedData) {
+            let data = passedData || {};
+            if (!passedData) {
+                try {
+                    data = JSON.parse(localStorage.getItem('applicantData') || '{}');
+                } catch (e) {
+                    data = {};
+                }
+            }
+
+            if (!data.name && !data.ukr && !data.notes) {
+                document.getElementById('savedInfo').style.display = 'none';
+                return;
+            }
+
+            document.getElementById('name').value = data.name || '';
+            document.getElementById('school').value = data.school || '';
+            document.getElementById('email').value = data.email || '';
+            document.getElementById('phone').value = data.phone || '';
+            document.getElementById('cab_ukr').value = data.ukr || '';
+            document.getElementById('cab_math').value = data.math || '';
+            document.getElementById('cab_hist').value = data.hist || '';
+            document.getElementById('cab_choice').value = data.choice || '';
+            document.getElementById('goal_uni').value = data.goal_uni || '';
+            document.getElementById('goal_spec').value = data.goal_spec || '';
+            document.getElementById('priority').value = data.priority || '';
+            document.getElementById('app_status').value = data.app_status || '';
+            document.getElementById('app_places').value = data.app_places || '';
+            document.getElementById('notes').value = data.notes || '';
+
+            let html = '';
+            if (data.name) html += `<p><strong>ПІБ:</strong> ${data.name}</p>`;
+            if (data.school) html += `<p><strong>Школа:</strong> ${data.school}</p>`;
+            if (data.email) html += `<p><strong>Пошта:</strong> ${data.email}</p>`;
+            if (data.phone) html += `<p><strong>Телефон:</strong> ${data.phone}</p>`;
+            if (data.ukr || data.math) {
+                html += `<p><strong>НМТ:</strong> Укр: ${data.ukr || '—'}, Мат: ${data.math || '—'}, Іст: ${data.hist || '—'}, Вибір: ${data.choice || '—'}</p>`;
+            }
+            if (data.goal_uni) html += `<p><strong>Університет:</strong> ${data.goal_uni}</p>`;
+            if (data.goal_spec) html += `<p><strong>Спеціальність:</strong> ${data.goal_spec}</p>`;
+            if (data.priority) html += `<p><strong>Пріоритет:</strong> ${data.priority}</p>`;
+            if (data.app_status) {
+                const statusText = {
+                    'preparing': 'Готуюся / ще не подавав',
+                    'submitted': 'Заяви подано',
+                    'recommended': 'Є рекомендація',
+                    'enrolled': 'Зараховано',
+                    'waiting': 'Чекаю результати'
+                };
+                html += `<p><strong>Статус заяв:</strong> ${statusText[data.app_status] || data.app_status}</p>`;
+            }
+            if (data.app_places) html += `<p><strong>Куди подав:</strong> ${data.app_places}</p>`;
+            if (data.notes) html += `<p><strong>Нотатки:</strong><br>${data.notes.replace(/\n/g, '<br>')}</p>`;
+
+            document.getElementById('infoContent').innerHTML = html || '<p>Немає збережених даних</p>';
+            document.getElementById('savedInfo').style.display = 'block';
+        }
+
+        // Завантажити при відкритті сторінки (безпечно)
+        window.addEventListener('load', function() {
+            try {
+                loadCabinet();
+            } catch (e) {
+                // ігноруємо, якщо localStorage недоступний
+            }
+        });
+    </script>
+</body>
+</html>
